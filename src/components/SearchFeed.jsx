@@ -8,8 +8,6 @@ import Videos from "./Videos";
 const SearchFeed = () => {
   const [videos, setVideos] = useState([]);
   const {searchTerm} = useParams();
-  console.log(searchTerm)
-
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${searchTerm}&regionCode=IN`)
       .then((data) => setVideos(data.items))

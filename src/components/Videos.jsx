@@ -1,10 +1,14 @@
 import React from 'react'
-import {Stack, Box} from '@mui/material';
+import {Stack, Box, Typography} from '@mui/material';
 import ChannelCard from './ChannelCard';
 import VideoCard from './VideoCard';
 
 const Videos = ({videos, direction}) => {
-  if(!videos?.length) return "Loading...";
+  if(!videos?.length) return (
+    <Typography color ="#fff" variant = "h5" fontWeight= "bold">
+              Loading your Videos...
+    </Typography>
+  )
   return (
     <Stack
     direction= {direction || "row"} flexWrap = "wrap" justifyContent = "start" gap={2}

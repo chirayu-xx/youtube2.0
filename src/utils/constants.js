@@ -20,7 +20,7 @@ export const categories = [
   { name: 'Mumbiker Nikhil', icon: < TheaterComedyIcon/>, },
   { name: 'Tech Burner', icon: <AppShortcutIcon/>, },
   { name: 'New Movie Trailer', icon: <OndemandVideoIcon />, },
-  { name: 'NextJS', icon: <CodeIcon />, },
+  { name: 'Think School', icon: <GraphicEqIcon />, },
   { name: 'T-series', icon: <MusicNoteIcon /> },
   { name: 'Love Babbar', icon: <SchoolIcon />, },
   { name: 'The Ranveer Show', icon: <GraphicEqIcon />, },
