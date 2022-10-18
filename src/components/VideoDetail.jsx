@@ -22,7 +22,11 @@ const VideoDetail = () => {
     fetchFromAPI(`commentThreads?part=snippet&videoId=${id}&maxResults=100`)
     .then((data) => setComments(data.items))
   },[id])
-  if(!videoDetail?.snippet) return 'Loading...'
+  if(!videoDetail?.snippet || !comments?.length) return (
+    <Typography sx={{height:'95vh'}} color ="#fff" variant = "h5" fontWeight= "bold">
+    Loading your Video...
+</Typography>
+  )
   const {snippet:{title, channelId, channelTitle, publishedAt}, statistics: {viewCount, likeCount }} = videoDetail;
   return (
     <Box minHeight='95vh'>
