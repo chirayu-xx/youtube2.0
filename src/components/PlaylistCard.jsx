@@ -10,18 +10,16 @@ import {
   demoChannelTitle,
 } from "../utils/constants";
 import { Stack } from "@mui/system";
-
-const   VideoCard = ({
-  video:{
-    id: { videoId },
+const   PlaylistCard = ({
+  video: {
     snippet,
-  }
+  },
 }) => {
   return (
     <Card
     sx={{width:{ xs:"100%",sm:'358px', md:'320px' }, boxShadow:'none', borderRadisu:0}}
     >
-      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+      <Link to={snippet ? `/video/${snippet?.resourceId?.videoId}` : demoVideoUrl}>
         <CardMedia
           alt={snippet?.title}
           sx={{ width: {
@@ -31,7 +29,7 @@ const   VideoCard = ({
         />
       </Link>
       <CardContent sx={{ backgroundColor: "#1e1e1e", height: "160px" }}>
-        <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+        <Link to={snippet ? `/video/${snippet?.resourceId?.videoId}` : demoVideoUrl}>
             <Typography
             variant='subtitle1' fontWeight="bold" color ="#FFF"
             >
@@ -60,4 +58,4 @@ const   VideoCard = ({
   );
 };
 
-export default VideoCard;
+export default PlaylistCard;

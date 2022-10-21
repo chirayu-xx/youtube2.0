@@ -6,6 +6,8 @@ import Feed from './components/Feed'
 import VideoDetail from './components/VideoDetail'
 import ChannelDetail from './components/ChannelDetail'
 import SearchFeed from './components/SearchFeed'
+
+import PlayListDetail from './components/PlayListDetail'
 const App = () => (
     <BrowserRouter>
      <Box sx={{backgroundColor:'#000'}}>
@@ -15,6 +17,7 @@ const App = () => (
             <Route path= '/video/:id' exact element = {<VideoDetail/>}/>
             <Route path= '/channel/:id' exact element = {<ChannelDetail/>}/>
             <Route path= '/search/:searchTerm' exact element = {<SearchFeed/>}/>
+            <Route path= '/playlist/:playListId' exact element = {<PlayListDetail/>}/>
         </Routes>
      </Box>
     </BrowserRouter>
