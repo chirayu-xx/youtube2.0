@@ -5,13 +5,14 @@ import VideoCard from './VideoCard';
 
 const Videos = ({videos, direction}) => {
   if(!videos?.length) return (
-    <Typography color ="#fff" variant = "h5" fontWeight= "bold">
+    <Typography color ="#fff" variant = "h5" fontWeight= "bold" margin={2}>
               Loading your Videos...
     </Typography>
   )
+  console.log(videos)
   return (
     <Stack
-    direction= {direction || "row"} flexWrap = "wrap" justifyContent = "start" gap={2}
+    direction= {direction || "row"} flexWrap = "wrap" justifyContent = "space-evenly" gap={2}
     >
         {videos.map((item,idx) => (
             <Box key= {idx}>

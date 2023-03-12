@@ -11,7 +11,7 @@ import {
 } from "../utils/constants";
 import { Stack } from "@mui/system";
 
-const   VideoCard = ({
+const VideoCard = ({
   video:{
     id: { videoId },
     snippet,

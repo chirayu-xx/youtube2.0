@@ -23,7 +23,7 @@ const VideoDetail = () => {
     .then((data) => setComments(data.items))
   },[id])
   if(!videoDetail?.snippet || !comments?.length) return (
-    <Typography sx={{height:'95vh'}} color ="#fff" variant = "h5" fontWeight= "bold">
+    <Typography sx={{height:'95vh'}} color ="#fff" variant = "h5" fontWeight= "bold" margin={2}>
     Loading your Video...
 </Typography>
   )
@@ -31,7 +31,7 @@ const VideoDetail = () => {
   return (
     <Box minHeight='95vh'>
       <Stack direction={{xs:'column', md:'row'}}>
-        <Box flex ={1}>
+        <Box flex ={1} margin={2}>
           <Box sx ={{width:'100%', position:'sticky', top:'86px'}}>
             <ReactPlayer
             url={`https://www.youtube.com/watch?v=${id}`}
@@ -39,12 +39,12 @@ const VideoDetail = () => {
             controls
             playing={true}
             />
-            <Typography color ="#fff" variant = "h5" fontWeight= "bold">
+            <Typography color ="#fff" variant = "h5" fontWeight= "bold" marginY={2}>
               {title}
             </Typography>
             <Stack direction ="row" 
             justifyContent="space-between"
-            sx={{color:"#fff"}} py={1} px={2}
+            sx={{color:"#fff"}} 
             >
               <Link to={`/channel/${channelId}`}>
                 <Typography color ="#fff" variant = "h6" fontWeight= "bold">
@@ -71,7 +71,7 @@ const VideoDetail = () => {
       </Stack>
        {
         comments.map((comment,idx) => (
-          <Box marginLeft={1}>
+          <Box marginLeft={1} zIndex={0} maxWidth='md'>
           <Stack flexDirection={'row'} gap={1} marginTop={1}>
           <CardMedia
           image={comment?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl || demoProfilePicture}
